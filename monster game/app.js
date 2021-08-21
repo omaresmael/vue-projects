@@ -80,6 +80,7 @@ const app = Vue.createApp({
             this.toggleClass = true;
             const attackValue = getRandomValue(10,25);
             this.monsterHealth -= attackValue;
+            this.addLogMessage('player','attack',attackValue)
             this.attackPlayer();
         },
         healPlayer() {
